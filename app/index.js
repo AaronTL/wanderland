@@ -159,8 +159,6 @@ class Indx extends Component {
 									/>
 									{/* reset list end */}
 
-
-
 									<MultiList
 										appbaseField="tag"
 										title="Maybe Matters"
@@ -185,6 +183,7 @@ class Indx extends Component {
 											and: ["TagSensor", "TagSensor", "WifiSensor", "TrafficSensor", "AttracSensor", "ParkingSensor"]
 										}}
 									/>
+
 									{/* <MultiList
 										appbaseField="place_type"
 										title="Place Type"
@@ -246,20 +245,19 @@ class Indx extends Component {
 	                  <li><a className="black-text" href="#!">Contact</a></li>
 	                  <li><a className="black-text" href="#!">Join us</a></li>
 	                  <li><a className="black-text" href="#!">Follow our git</a></li>
-	                  <li><a className="black-text" href="#!">Facebook</a></li>
+	                  <li><a className="black-text" href="#!">Facebook,Ins</a></li>
 	                </ul>
 	              </div>
 	            </div>
 	          </div>
 	          <div className="footer-copyright">
 	            <div className="container">
-	            	<a className="black-text" href="#!">© 2017 Copyright Text</a>
+	            	<a className="black-text" href="#!">©2017 Copyright Text</a>
 	            </div>
 	          </div>
 	        </footer>
 
 				</ReactiveBase>
-
 			);
 		}
 }
