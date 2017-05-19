@@ -29,5 +29,9 @@ module.exports = {
 			}
 		]
 	},
-	externals: ["ws"]
+	externals: ["ws"],
+	devServer: {
+		 compress: true,
+		 disableHostCheck: true,   // That solved it
+	}  
 }
