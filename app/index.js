@@ -24,7 +24,6 @@ class Indx extends Component {
 					<p>{res.address}</p>
 					<span className="tag">{res.place_type}</span>
 					<span className="tag">{res.tag}</span>
-					<a className="call-btn" href={`tel:${res.phone_number}`}> Related</a>
 				</div>),
 			url: res.listing_url
 		};
@@ -49,14 +48,14 @@ class Indx extends Component {
 			<ReactiveBase
 				app="wanderful4"
 				credentials="rQFkQEu8o:7376c9cb-98de-4b93-bf26-468461f1c941"
-				type="mock"
+				type="pmmock"
 			>
 					<header>
 						<nav className="background-color:rgba(0, 0, 0, 0.5);">
 							<a className="brand">wanderful</a>
 							<DataSearch
 								componentId="NameSensor"
-								placeholder="Search for restaurants, bars..."
+								placeholder="Search for destination..."
 								appbaseField="name"
 								searchInputId="NameSearch"
 							/>
@@ -79,7 +78,7 @@ class Indx extends Component {
 										title="Matter Most"
 										data={[
 											{
-												label: "Wifi",
+												label: "Safty", //Wifi
 												value: true
 											}
 										]}
@@ -99,7 +98,7 @@ class Indx extends Component {
 										componentId="AttracSensor"
 										data={[
 											{
-												label: "Attractions",
+												label: "amazing Price",
 												value: true
 											}
 										]}
@@ -114,7 +113,62 @@ class Indx extends Component {
 											}
 										]}
 									/>
+									{/* reset list begin */}
 
+									<ToggleList
+										appbaseField="wifi"
+										componentId="WifiSensor"
+										title="Commute by Car"
+										data={[
+											{
+												label: "< 30 min",
+												value: true
+											}
+										]}
+									/>
+									<ToggleList
+										appbaseField="attractions"
+										componentId="AttracSensor"
+										data={[
+											{
+												label: "30-60 min",
+												value: true
+											}
+										]}
+									/>
+									<ToggleList
+										appbaseField="easy_commute"
+										componentId="TrafficSensor"
+										data={[
+											{
+												label: "1.0-1.5 hr",
+												value: true
+											}
+										]}
+									/>
+
+									<ToggleList
+										appbaseField="parking_space"
+										componentId="ParkingSensor"
+										data={[
+											{
+												label: "> 1.5 hr",
+												value: true
+											}
+										]}
+									/>
+									{/* reset list end */}
+
+
+
+									<MultiList
+										appbaseField="tag"
+										title="Maybe Matters"
+										componentId="TagSensor"
+										react={{
+											and: ["RatingsSensor", "TypeSensor", "WifiSensor", "TrafficSensor", "AttracSensor", "ParkingSensor"]
+										}}
+									/>
 									<RatingsFilter
 										componentId="RatingsSensor"
 										appbaseField="rating"
@@ -131,23 +185,14 @@ class Indx extends Component {
 											and: ["TagSensor", "TagSensor", "WifiSensor", "TrafficSensor", "AttracSensor", "ParkingSensor"]
 										}}
 									/>
-
-									<MultiList
-										appbaseField="tag"
-										title="Maybe Matters"
-										componentId="TagSensor"
-										react={{
-											and: ["RatingsSensor", "TypeSensor", "WifiSensor", "TrafficSensor", "AttracSensor", "ParkingSensor"]
-										}}
-									/>
-									<MultiList
+									{/* <MultiList
 										appbaseField="place_type"
 										title="Place Type"
 										componentId="TypeSensor"
 										react={{
 											and: ["RatingsSensor", "TagSensor", "WifiSensor", "TrafficSensor", "AttracSensor", "ParkingSensor"]
 										}}
-									/>
+									/> */}
 
 								</div>
 							</aside>
