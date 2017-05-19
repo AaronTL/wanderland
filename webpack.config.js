@@ -31,7 +31,7 @@ module.exports = {
 	},
 	externals: ["ws"],
 	devServer: {
-		 compress: true,
-		 disableHostCheck: true,   // That solved it
-	}  
+	  compress: true,
+	  public: 'store-client-aaron.aws.io' // That solved it
+	}
 }
