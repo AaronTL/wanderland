@@ -32,6 +32,6 @@ module.exports = {
 	externals: ["ws"],
 	devServer: {
 	  compress: true,
-	  public: 'store-client-aaron.aws.io' // That solved it
+	  public: '52.36.109.246'
 	}
 }
