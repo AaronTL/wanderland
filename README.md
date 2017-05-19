@@ -15,3 +15,9 @@ tip: attractions => amzing Price
      PotentialRomate =>  30-60 min
      HiTech => 1.0-1.5 hr
      Delivery => >1.5 hr
+
+AWS set:
+"webpack-dev-server": "webpack-dev-server --inline --hot --port 8003",
+            ||
+            \/
+                     webpack-dev-server --port 8003 --hot --host 0.0.0.0
