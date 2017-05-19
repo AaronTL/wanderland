@@ -17,7 +17,7 @@ tip: attractions => amzing Price
      Delivery => >1.5 hr
 
 AWS set:
-"webpack-dev-server": "webpack-dev-server --inline --hot --port 8003",
+"webpack-dev-server": "webpack-dev-server --inline --hot --port 3000",
             ||
             \/
                      webpack-dev-server --port 3000 --hot --host 0.0.0.0
