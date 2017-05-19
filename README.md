@@ -20,4 +20,4 @@ AWS set:
 "webpack-dev-server": "webpack-dev-server --inline --hot --port 8003",
             ||
             \/
-                     webpack-dev-server --port 8003 --hot --host 0.0.0.0
+                     webpack-dev-server --port 3000 --hot --host 0.0.0.0
