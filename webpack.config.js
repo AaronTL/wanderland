@@ -32,6 +32,6 @@ module.exports = {
 	externals: ["ws"],
 	devServer: {
 	  compress: true,
-	  public: '52.88.213.54'
+	  public: '34.210.148.185'
 	}
 }
